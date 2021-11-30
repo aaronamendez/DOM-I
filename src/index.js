@@ -74,5 +74,38 @@ const ctaImg = document.querySelector("#cta-img");
 ctaImg.src = siteContent["images"]["cta-img"];
 
 // MIDDLE IMG QUERY SELECTOR
-const middleImg = document.querySelector("#cta-img");
+const middleImg = document.querySelector("#middle-img");
 middleImg.src = siteContent["images"]["accent-img"];
+
+// NAV ITALIC CLASS QUERY SELECTOR
+const italicClass = document.querySelectorAll(" nav a");
+italicClass.forEach((el) => (el.className = "italic"));
+
+// Element Selectors
+const ctaHeader = document.querySelector("h1");
+ctaHeader.textContent = siteContent["cta"]["h1"];
+const ctaButton = document.querySelector("button");
+ctaButton.textContent = siteContent["cta"]["button"];
+
+// MAIN SELECTORS
+const firstTopContent = document.querySelector(".text-content:nth-of-type(1)");
+const secondTopContent = document.querySelector(".text-content:nth-of-type(2)");
+const firstBotContent = document.querySelector(".text-content:nth-of-type(3)");
+const secondBotContent = document.querySelector(".text-content:nth-of-type(4)");
+
+const topFirstHeader = firstTopContent.querySelector("h4");
+const topFirstPara = firstTopContent.querySelector("p");
+const topSecondHeader = secondTopContent.querySelector("h4");
+const topSecondPara = secondTopContent.querySelector("p");
+
+// const botFirstHeader = firstBotContent.querySelector("h4");
+// const botFirstPara = firstBotContent.querySelector("p");
+// const botSecondHeader = secondTopContent.querySelector("h4");
+// const botSecondPara = secondTopContent.querySelector("p");
+
+topFirstHeader.textContent = siteContent["main-content"]["features-h4"];
+topFirstPara.textContent = siteContent["main-content"]["features-content"];
+topSecondHeader.textContent = siteContent["main-content"]["about-h4"];
+topSecondPara.textContent = siteContent["main-content"]["about-content"];
+// botFirstHeader.textContent = siteContent["main-content"]["services-h4"];
+// botFirstPara.textContent = siteContent["main-content"]["services-content"];
